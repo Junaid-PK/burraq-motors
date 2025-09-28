@@ -38,7 +38,7 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
         <div class="container-custom">
-            <div class="flex justify-between items-center py-3 sm:py-4">
+            <div class="flex justify-between items-center py-2 sm:py-4">
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center space-x-2 sm:space-x-3 group">
@@ -85,7 +85,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="pt-16">
+    <main class="pt-14 sm:pt-20">
         @yield('content')
     </main>
 

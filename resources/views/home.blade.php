@@ -5,7 +5,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+<section class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden pt-4 sm:pt-8">
     <div class="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-black/60"></div>
     
     <!-- Animated background elements -->
