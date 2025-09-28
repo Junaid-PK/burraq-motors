@@ -211,7 +211,7 @@
             <a href="{{ route('cars.index') }}" class="btn-primary bg-white text-primary-600 hover:bg-gray-100">
                 Browse Our Cars
             </a>
-            <a href="{{ route('contact') }}" class="btn-secondary border-white text-white hover:bg-white hover:text-primary-600">
+            <a href="{{ route('contact') }}" class="btn-secondary border-white text-white hover:bg-white hover:text-primary-600 text-refined bg-primary-600">
                 Contact Us
             </a>
         </div>
