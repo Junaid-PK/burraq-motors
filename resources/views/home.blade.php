@@ -9,45 +9,45 @@
     <div class="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-black/60"></div>
     
     <!-- Animated background elements -->
-    <div class="absolute top-20 left-10 w-32 h-32 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-20 right-10 w-48 h-48 bg-primary-600/15 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-    <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-white/10 rounded-full blur-2xl animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="absolute top-20 left-4 sm:left-10 w-24 h-24 sm:w-32 sm:h-32 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-20 right-4 sm:right-10 w-32 h-32 sm:w-48 sm:h-48 bg-primary-600/15 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+    <div class="absolute top-1/2 left-1/4 w-16 h-16 sm:w-24 sm:h-24 bg-white/10 rounded-full blur-2xl animate-pulse" style="animation-delay: 2s;"></div>
     
-    <div class="relative z-10 text-center text-white container-custom">
+    <div class="relative z-10 text-center text-white container-custom px-4 sm:px-6 lg:px-8">
         <div class="animate-fade-in">
-            <div class="mb-6">
-                <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm text-white border border-white/20">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="mb-4 sm:mb-6">
+                <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium bg-white/10 backdrop-blur-sm text-white border border-white/20">
+                    <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     Trusted by 500+ Customers
                 </span>
             </div>
             
-            <h1 class="text-6xl md:text-8xl font-elegant mb-6 text-shadow-lg leading-tight">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-elegant mb-4 sm:mb-6 text-shadow-lg leading-tight">
                 Premium Used Cars
                 <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-100">
                     in Manchester
                 </span>
             </h1>
             
-            <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-shadow leading-relaxed text-refined">
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto text-shadow leading-relaxed text-refined px-4">
                 Discover exceptional quality vehicles at unbeatable prices. Your dream car is just a click away with our premium collection.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-                <a href="{{ route('cars.index') }}" class="group btn-primary text-lg px-10 py-5 relative overflow-hidden">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 px-4">
+                <a href="{{ route('cars.index') }}" class="group btn-primary text-base sm:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 relative overflow-hidden">
                     <span class="relative z-10 flex items-center justify-center">
-                        <svg class="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                         Browse Cars
                     </span>
                     <div class="absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
-                <a href="{{ route('contact') }}" class="group btn-secondary text-lg px-10 py-5">
+                <a href="{{ route('contact') }}" class="group btn-secondary text-base sm:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5">
                     <span class="flex items-center justify-center">
-                        <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                         </svg>
                         Get in Touch
@@ -56,28 +56,28 @@
             </div>
             
             <!-- Trust indicators -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div class="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto px-4">
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-primary-300 mb-2">500+</div>
-                    <div class="text-sm text-gray-300">Happy Customers</div>
+                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-primary-300 mb-1 sm:mb-2">500+</div>
+                    <div class="text-xs sm:text-sm text-gray-300">Happy Customers</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-primary-300 mb-2">15+</div>
-                    <div class="text-sm text-gray-300">Years Experience</div>
+                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-primary-300 mb-1 sm:mb-2">15+</div>
+                    <div class="text-xs sm:text-sm text-gray-300">Years Experience</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-primary-300 mb-2">98%</div>
-                    <div class="text-sm text-gray-300">Satisfaction Rate</div>
+                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-primary-300 mb-1 sm:mb-2">98%</div>
+                    <div class="text-xs sm:text-sm text-gray-300">Satisfaction Rate</div>
                 </div>
             </div>
         </div>
     </div>
     
     <!-- Enhanced scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div class="flex flex-col items-center text-white/80">
-            <span class="text-sm mb-2 font-medium">Scroll to explore</span>
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span class="text-xs sm:text-sm mb-1 sm:mb-2 font-medium">Scroll to explore</span>
+            <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
         </div>
