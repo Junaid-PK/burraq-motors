@@ -20,8 +20,6 @@ class CarResource extends Resource
 {
     protected static ?string $model = Car::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlineRectangleStack;
-
     protected static ?string $navigationLabel = 'Cars';
 
     protected static ?string $modelLabel = 'Car';
