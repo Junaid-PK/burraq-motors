@@ -112,7 +112,7 @@
                 @foreach($cars as $car)
                     <div class="card group">
                         <div class="relative overflow-hidden rounded-t-xl">
-                            <img src="{{ $car->main_image ?? 'https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }}" 
+                            <img src="{{ $car->images[0]->images ?? 'https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }}" 
                                  alt="{{ $car->make }} {{ $car->model }}" 
                                  class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
                             

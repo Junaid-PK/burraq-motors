@@ -42,7 +42,7 @@
                                     <th class="px-6 py-6 text-center min-w-80 border-r border-gray-200 last:border-r-0">
                                         <div class="flex flex-col items-center space-y-3">
                                             <div class="relative group">
-                                                <img src="{{ $car->main_image ?? 'https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }}" 
+                                                <img src="{{ $car->images[0]->images ?? 'https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }}" 
                                                      alt="{{ $car->make }} {{ $car->model }}" 
                                                      class="w-40 h-24 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-300">
                                                 <div class="absolute inset-0 bg-black/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

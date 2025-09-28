@@ -98,9 +98,10 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @forelse($featuredCars as $car)
+            
             <div class="card group animate-slide-up" style="animation-delay: {{ $loop->index * 0.1 }}s">
                 <div class="relative overflow-hidden rounded-t-xl">
-                    <img src="{{ $car->main_image ?? 'https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }}" 
+                    <img src="{{ asset($car->images[0]) }}" 
                          alt="{{ $car->make }} {{ $car->model }}" 
                          class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">

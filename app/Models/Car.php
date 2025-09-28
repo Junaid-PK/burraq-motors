@@ -44,7 +44,10 @@ class Car extends Model
     public function getMainImageAttribute()
     {
         $images = $this->images;
-        return $images ? $images[0] ?? null : null;
+        if (is_array($images) && count($images) > 0) {
+            return $images[0];
+        }
+        return null;
     }
 
     public function getFormattedPriceAttribute()

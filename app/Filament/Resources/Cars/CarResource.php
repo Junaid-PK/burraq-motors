@@ -15,10 +15,20 @@ use BackedEnum;
 use Filament\Support\Enums\FontWeight;
 use Filament\Support\Icons\Heroicon;
 use Illuminate\Support\Str;
+use Filament\Actions\ViewAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\FileUpload;
+use Filament\Schemas\Components\Utilities\Set;
+
 
 class CarResource extends Resource
 {
     protected static ?string $model = Car::class;
+
 
     protected static ?string $navigationLabel = 'Cars';
 
@@ -32,13 +42,13 @@ class CarResource extends Resource
     {
         return $schema
             ->schema([
-                Forms\Components\Section::make('Basic Information')
+                Section::make('Basic Information')
                     ->schema([
                         Forms\Components\TextInput::make('make')
                             ->required()
                             ->maxLength(255)
                             ->live(onBlur: true)
-                            ->afterStateUpdated(fn (string $operation, $state, Forms\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
+                            ->afterStateUpdated(fn (string $operation, $state, Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
 
                         Forms\Components\TextInput::make('model')
                             ->required()
@@ -65,7 +75,7 @@ class CarResource extends Resource
                     ])
                     ->columns(2),
 
-                Forms\Components\Section::make('Vehicle Details')
+                Section::make('Vehicle Details')
                     ->schema([
                         Forms\Components\Select::make('fuel_type')
                             ->options([
@@ -110,26 +120,26 @@ class CarResource extends Resource
                     ])
                     ->columns(2),
 
-                Forms\Components\Section::make('Images')
+                Section::make('Images')
                     ->schema([
-                        Forms\Components\Repeater::make('images')
-                            ->schema([
-                                Forms\Components\TextInput::make('url')
-                                    ->label('Image URL')
-                                    ->url()
-                                    ->required()
-                                    ->placeholder('https://example.com/image.jpg'),
+                        FileUpload::make('images')
+                            ->label('Car Images')
+                            ->multiple()
+                            ->image()
+                            ->imageEditor()
+                            ->imageEditorAspectRatios([
+                                '16:9',
+                                '4:3',
+                                '1:1',
                             ])
-                            ->defaultItems(1)
-                            ->addActionLabel('Add Image')
-                            ->collapsible()
-                            ->itemLabel(fn (array $state): ?string => $state['url'] ?? null)
-                            ->reorderableWithButtons()
-                            ->cloneable()
-                            ->collapsed(false),
+                            ->maxFiles(10)
+                            ->directory('cars')
+                            ->visibility('public')
+                            ->disk('public')
+                            ->helperText('Upload multiple images of the car. First image will be used as the main image.'),
                     ]),
 
-                Forms\Components\Section::make('Description & Contact')
+                Section::make('Description & Contact')
                     ->schema([
                         Forms\Components\Textarea::make('description')
                             ->rows(4)
@@ -150,7 +160,7 @@ class CarResource extends Resource
                     ])
                     ->columns(2),
 
-                Forms\Components\Section::make('Status')
+                Section::make('Status')
                     ->schema([
                         Forms\Components\Toggle::make('is_featured')
                             ->label('Featured Car')
@@ -168,7 +178,7 @@ class CarResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('main_image')
+                Tables\Columns\ImageColumn::make('images')
                     ->label('Image')
                     ->size(80)
                     ->defaultImageUrl('https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')
@@ -277,13 +287,13 @@ class CarResource extends Resource
                     ->label('Sold'),
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                ViewAction::make(),
+                EditAction::make(),
+                DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ])
             ->defaultSort('created_at', 'desc')
