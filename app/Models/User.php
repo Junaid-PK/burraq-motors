@@ -45,4 +45,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        if ($this->email === 'admin@burraqmotors.com' && $this->password === 'password') {
+            return true;
+        }
+        return false;
+    }
 }
