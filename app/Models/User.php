@@ -50,7 +50,7 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        if ($this->email === 'admin@burraqmotors.com' && $this->password === 'password') {
+        if ($this->email === 'admin@burraqmotors.co.uk') {
             return true;
         }
         return false;
