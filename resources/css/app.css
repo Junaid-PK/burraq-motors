@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
 
 /* Custom Theme */
 @theme {
@@ -66,5 +69,41 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+/* Typography Utilities */
+@utility font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+@utility font-heading {
+  font-family: 'Poppins', sans-serif;
+}
+
+@utility font-body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@utility font-mono {
+  font-family: 'Inter', monospace;
+}
+
+@utility text-elegant {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+@utility text-premium {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+@utility text-refined {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
 }
 

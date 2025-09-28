@@ -24,14 +24,14 @@
                 </span>
             </div>
             
-            <h1 class="text-6xl md:text-8xl font-bold mb-6 text-shadow-lg leading-tight">
+            <h1 class="text-6xl md:text-8xl font-elegant mb-6 text-shadow-lg leading-tight">
                 Premium Used Cars
                 <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-100">
                     in Manchester
                 </span>
             </h1>
             
-            <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-shadow leading-relaxed">
+            <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-shadow leading-relaxed text-refined">
                 Discover exceptional quality vehicles at unbeatable prices. Your dream car is just a click away with our premium collection.
             </p>
             
@@ -88,10 +88,10 @@
 <section class="section-padding bg-gray-50" id="featured-cars">
     <div class="container-custom">
         <div class="text-center mb-16 animate-slide-up">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <h2 class="text-4xl md:text-5xl font-elegant mb-4">
                 Featured <span class="gradient-text">Vehicles</span>
             </h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto text-refined">
                 Handpicked premium vehicles that represent the best of our inventory
             </p>
         </div>
@@ -101,7 +101,7 @@
             
             <div class="card group animate-slide-up" style="animation-delay: {{ $loop->index * 0.1 }}s">
                 <div class="relative overflow-hidden rounded-t-xl">
-                    <img src="{{ asset($car->images[0]) }}" 
+                    <img src="{{ Storage::url($car->images[0]) }}" 
                          alt="{{ $car->make }} {{ $car->model }}" 
                          class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">{{ $car->make }} {{ $car->model }}</h3>
+                    <h3 class="text-xl font-premium mb-2">{{ $car->make }} {{ $car->model }}</h3>
                     <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
                             <span class="font-semibold">Year:</span> {{ $car->year }}
@@ -229,8 +229,8 @@
 <section class="section-padding bg-primary-600 text-white">
     <div class="container-custom">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Burraq Motors?</h2>
-            <p class="text-lg text-primary-100 max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-elegant mb-4">Why Choose Burraq Motors?</h2>
+            <p class="text-lg text-primary-100 max-w-2xl mx-auto text-refined">
                 Your trusted partner for quality Japanese cars and exceptional service
             </p>
         </div>
@@ -298,8 +298,8 @@
 <section class="section-padding bg-white">
     <div class="container-custom">
         <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Our Services</h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-elegant mb-6 gradient-text">Our Services</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto text-refined">
                 We provide comprehensive automotive services to ensure you get the best car buying experience
             </p>
         </div>
@@ -311,7 +311,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-4">Quality Assurance</h3>
+                <h3 class="text-xl font-premium mb-4">Quality Assurance</h3>
                 <p class="text-gray-600">Every vehicle undergoes thorough inspection and quality checks before sale.</p>
             </div>
             
@@ -321,7 +321,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-4">Best Prices</h3>
+                <h3 class="text-xl font-premium mb-4">Best Prices</h3>
                 <p class="text-gray-600">Competitive pricing with transparent, no-hidden-fee policies.</p>
             </div>
             
@@ -331,7 +331,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-4">24/7 Support</h3>
+                <h3 class="text-xl font-premium mb-4">24/7 Support</h3>
                 <p class="text-gray-600">Round-the-clock customer support for all your automotive needs.</p>
             </div>
             
@@ -341,7 +341,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-4">Warranty</h3>
+                <h3 class="text-xl font-premium mb-4">Warranty</h3>
                 <p class="text-gray-600">Comprehensive warranty coverage on all our vehicles for peace of mind.</p>
             </div>
         </div>
@@ -415,8 +415,8 @@
 <section class="section-padding bg-white">
     <div class="container-custom">
         <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">What Our Customers Say</h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-elegant mb-6 gradient-text">What Our Customers Say</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto text-refined">
                 Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
             </p>
         </div>
@@ -637,10 +637,10 @@
     
     <div class="container-custom text-center relative z-10">
         <div class="max-w-3xl mx-auto animate-slide-up">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            <h2 class="text-4xl md:text-5xl font-elegant mb-6">
                 Ready to Find Your <span class="text-primary-400">Dream Car?</span>
             </h2>
-            <p class="text-xl mb-8 text-gray-300">
+            <p class="text-xl mb-8 text-gray-300 text-refined">
                 Browse our extensive collection of premium used cars and find the perfect vehicle for your needs.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">

@@ -16,7 +16,7 @@
     @vite('resources/css/app.css')
     
 </head>
-<body class="font-sans antialiased">
+        <body class="font-body antialiased">
     <!-- WhatsApp Floating Button -->
     <div class="fixed bottom-6 right-6 z-50">
         <a href="https://wa.me/447828530702?text=Hi%20Burraq%20Motors,%20I'm%20interested%20in%20your%20cars" 
@@ -42,24 +42,24 @@
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center space-x-3 group">
-                        <div class="w-20 flex-shrink-0">
+                        <div class="w-10 flex-shrink-0">
                             <img src="{{ asset('assets/logo.jpg') }}" alt="Burraq Motors Logo" class="w-full h-full">
                         </div>
-                        <div class="hidden sm:block">
-                            <span class="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors duration-300">Burraq</span>
-                            <span class="text-xl font-bold text-primary-600 group-hover:text-primary-700 transition-colors duration-300">Motors</span>
-                        </div>
+                                <div class="hidden sm:block">
+                                    <span class="text-xl font-elegant text-gray-900 group-hover:text-primary-600 transition-colors duration-300">Burraq</span>
+                                    <span class="text-xl font-elegant text-primary-600 group-hover:text-primary-700 transition-colors duration-300">Motors</span>
+                                </div>
                     </a>
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="{{ route('home') }}" class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300">Home</a>
-                    <a href="{{ route('cars.index') }}" class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300">Cars</a>
-                    <a href="{{ route('about') }}" class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300">About</a>
-                    <a href="{{ route('contact') }}" class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300">Contact</a>
-                    <a href="{{ route('cars.compare') }}" class="btn-primary text-sm">Compare Cars</a>
-                </div>
+                        <div class="hidden md:flex items-center space-x-8">
+                            <a href="{{ route('home') }}" class="text-gray-700 hover:text-primary-600 font-heading font-medium transition-colors duration-300">Home</a>
+                            <a href="{{ route('cars.index') }}" class="text-gray-700 hover:text-primary-600 font-heading font-medium transition-colors duration-300">Cars</a>
+                            <a href="{{ route('about') }}" class="text-gray-700 hover:text-primary-600 font-heading font-medium transition-colors duration-300">About</a>
+                            <a href="{{ route('contact') }}" class="text-gray-700 hover:text-primary-600 font-heading font-medium transition-colors duration-300">Contact</a>
+                            <a href="{{ route('cars.compare') }}" class="btn-primary text-sm font-heading">Compare Cars</a>
+                        </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">

@@ -40,7 +40,7 @@
             <!-- Car Images -->
             <div>
                 <div class="mb-4">
-                    <img id="mainImage" src="{{ $car->images[0]->images ?? 'https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }}" 
+                    <img id="mainImage" src="{{ Storage::url($car->images[0]) }}" 
                          alt="{{ $car->make }} {{ $car->model }}" 
                          class="w-full h-96 object-cover rounded-lg shadow-lg">
                 </div>
@@ -48,10 +48,10 @@
                 @if($car->images && count($car->images) > 1)
                     <div class="grid grid-cols-4 gap-2">
                         @foreach($car->images as $index => $image)
-                            <img src="{{ $image }}" 
+                            <img src="{{ Storage::url($image) }}" 
                                  alt="{{ $car->make }} {{ $car->model }} - Image {{ $index + 1 }}"
                                  class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-75 transition-opacity duration-300"
-                                 onclick="changeMainImage('{{ $image }}')">
+                                 onclick="changeMainImage('{{ Storage::url($image) }}')">
                         @endforeach
                     </div>
                 @endif
@@ -177,7 +177,7 @@
             @foreach($relatedCars as $relatedCar)
                 <div class="card group">
                     <div class="relative overflow-hidden rounded-t-xl">
-                        <img src="{{ $relatedCar->images[0]->images ?? 'https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }}" 
+                        <img src="{{ Storage::url($relatedCar->images[0]) }}" 
                              alt="{{ $relatedCar->make }} {{ $relatedCar->model }}" 
                              class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-gray-900 px-2 py-1 rounded-full text-sm font-bold">
