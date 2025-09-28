@@ -106,6 +106,7 @@ class CarResource extends Resource
                                 'Convertible' => 'Convertible',
                                 'MPV' => 'MPV',
                                 'Pickup' => 'Pickup',
+                                'Sedan' => 'Sedan',
                             ])
                             ->searchable(),
 
@@ -149,12 +150,14 @@ class CarResource extends Resource
                         Forms\Components\TextInput::make('contact_email')
                             ->required()
                             ->email()
+                            ->default('contactus@burraqmotors.co.uk')
                             ->maxLength(255)
                             ->placeholder('contactus@burraqmotors.co.uk'),
 
                         Forms\Components\TextInput::make('contact_phone')
                             ->required()
                             ->tel()
+                            ->default('+44 7828 530702')
                             ->maxLength(255)
                             ->placeholder('+44 7828 530702'),
                     ])
