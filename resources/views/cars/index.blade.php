@@ -112,9 +112,15 @@
                 @foreach($cars as $car)
                     <div class="card group">
                         <div class="relative overflow-hidden rounded-t-xl">
+                            @if($car->images)
                             <img src="{{ Storage::url($car->images[0]) }}" 
                                  alt="{{ $car->make }} {{ $car->model }}" 
                                  class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                            @else
+                            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="{{ $car->make }} {{ $car->model }}" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                            @endif
                             
                             @if($car->is_featured)
                                 <div class="absolute top-3 left-3 bg-primary-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
